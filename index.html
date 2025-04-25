@@ -38,6 +38,24 @@
         <br>
         <button class="resume-btn" onclick="openResume()">View Resume</button>
     </div>
+<div class="container">
+    <h3>Select a Project to View</h3>
+    <select id="projectSelect">
+        <option value="https://chatgpt.com/canvas/shared/67f927efbf5c8191a3e641c42f0d51a7">1. Annieze Farms – AI Farming to Boost Agribusiness & Create Jobs</option>
+        <option value="https://chatgpt.com/canvas/shared/67f9254845448191b46209a54fb3f7c7">2. Garment Reused Project – Fabric Recycling for Eco-Sustainability & Job Creation</option>
+        <option value="https://chatgpt.com/canvas/shared/67ff9b1737ac8191928b4ee202bb488e">3. MicroLift – Informal Credit Loan App to Empower African SMEs</option>
+    </select>
+    <br><br>
+    <button class="project-btn" onclick="openProject()">View Project</button>
+</div>
+
+<script>
+    function openProject() {
+        const selectElement = document.getElementById("projectSelect");
+        const selectedProject = selectElement.value;
+        window.open(selectedProject, "_blank");
+    }
+</script>
 
     <script>
         function openResume() {
