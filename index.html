@@ -1,181 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Selector</title>
-    <style>
-        .container {
-            text-align: center;
-            margin-top: 50px;
-        }
-        .resume-btn, .link-btn {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-            margin: 10px;
-            text-decoration: none;
-            display: inline-block;
-            border-radius: 5px;
-        }
-        .hero-text {
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
-     <title>Project Selector</title>
-    <style>
-        .container {
-            text-align: center;
-            margin-top: 50px;
-        }
-        .project-btn, .link-btn {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-            margin: 10px;
-            text-decoration: none;
-            display: inline-block;
-            border-radius: 5px;
-        }
-        .hero-text {
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style> 
-    
-    </head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume & Project Selector</title>
+  <style>
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .resume-btn, .project-btn, .link-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 5px;
+    }
+    .hero-text {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 300px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+
 <body>
-    <div class="container">
-        <h2>Select a Resume</h2>
-        <select id="resumeSelect">
-            <option value="Fred%20Product%20Owner.pdf">Product Owner</option>
-            <option value="Fred%20Product%20Manager.pdf">Product Manager</option>
-            <option value="Frederick%20Ogwu%20%20Business%20Development.pdf">Business Development</option>
-         </select>
-        <br>
-        <button class="resume-btn" onclick="openResume()">View Resume</button>
-    </div>
-<div class="container">
+  <!-- Resume Selector -->
+  <div class="container">
+    <h2>Select a Resume</h2>
+    <select id="resumeSelect">
+      <option value="Fred%20Product%20Owner.pdf">Product Owner</option>
+      <option value="Fred%20Product%20Manager.pdf">Product Manager</option>
+      <option value="Frederick%20Ogwu%20%20Business%20Development.pdf">Business Development</option>
+    </select>
+    <br>
+    <button class="resume-btn" onclick="openResume()">View Resume</button>
+  </div>
+
+  <!-- Project Selector -->
+  <div class="container">
     <h3>Select a Project to View</h3>
     <select id="projectSelect">
-        <option value="https://chatgpt.com/canvas/shared/67f927efbf5c8191a3e641c42f0d51a7">1. Annieze Farms – AI Farming to Boost Agribusiness & Create Jobs</option>
-        <option value="https://chatgpt.com/canvas/shared/67f9254845448191b46209a54fb3f7c7">2. Garment Reused Project – Fabric Recycling for Eco-Sustainability & Job Creation</option>
-        
+      <option value="https://chatgpt.com/canvas/shared/67f927efbf5c8191a3e641c42f0d51a7">1. Annieze Farms – AI Farming to Boost Agribusiness & Create Jobs</option>
+      <option value="https://chatgpt.com/canvas/shared/67f9254845448191b46209a54fb3f7c7">2. Garment Reused Project – Fabric Recycling for Eco-Sustainability & Job Creation</option>
     </select>
     <br><br>
     <button class="project-btn" onclick="openProject()">View Project</button>
-</div>
+  </div>
 
-<script>
-    function openProject() {
-        const selectElement = document.getElementById("projectSelect");
-        const selectedProject = selectElement.value;
-        window.open(selectedProject, "_blank");
+  <!-- Scripts -->
+  <script>
+    function openResume() {
+      const selectedFile = document.getElementById("resumeSelect").value;
+      window.open(selectedFile, "_blank");
     }
-</script>
+    function openProject() {
+      const selectedProject = document.getElementById("projectSelect").value;
+      window.open(selectedProject, "_blank");
+    }
+  </script>
 
-    <script>
-        function openResume() {
-            var selectedFile = document.getElementById("resumeSelect").value;
-            window.open(selectedFile, "_blank");
-        }
-    </script>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-text">
-            <p>Welcome!</p>
-            <h1>Frederick Odume Ogwu. I prefer to be called Frederick Ogwu.</h1>
-            <p>
-               I’m a Business Systems Strategist, Product Development Lead, an Entrepreneurial and Product Coach with over 30 years of hands-on leadership experience across Europe and Africa, guiding organizations and startups from concept to real-world impact. Here are links connecting you to my
-                professional pages where you can learn about my skills, experience, and projects.
-            </p>
-            <a href="https://linkedin.com/in/lewisham-multi-solutions-limited-4499b0278" target="_blank" class="link-btn">Company Profile</a>
-            <a href="https://medium.com/@fredogwu" target="_blank" class="link-btn">Medium</a>
-            <a href="https://linkedin.com/in/frederick-ogwu-msc-sfc-ai-wb-lean-six-sigma-acca-cat-bb002527" target="_blank" class="link-btn">LinkedIn</a>
-            <br><br>
-            <button class="link-btn">Project Prototypes</button> 
-            <br>
-             <a href="https://youtu.be/SaDncMN1v8o "target="_blank" class="link-btn"> NaijaFuelWatch App (Nigeria Oil Subsidy Product)</a> 
-             <a href="https://youtu.be/CtpujVd4Gg4 "target="_blank" class="link-btn"> National Assembly App (Opinion Pool Product)</a>
-            <a href=" https://youtu.be/pUUmJvmqchA"target="_blank" class="link-btn"> FTA System App (Petro Stations Product)</a>
-            <a href="https://youtu.be/O-XlwYm7nrA "target="_blank" class="link-btn"> LearnSphere AI App (Humanoid Robots Lecturer  Product)</a>
-            <a href="https://youtu.be/bBOPHqC30jE "target="_blank" class="link-btn">MicroLift Credit Loan App (Informal Sector Credit Loan Product)</a>
-            <a href="https://youtu.be/GRGk9B5m4ms "target="_blank" class="link-btn">Assets Management App (Assets Valuation Management Product)</a>
-            <a href="https://youtu.be/yXViAeJUUC4 "target="_blank" class="link-btn">LPG Gas Home Purchase and Delivery App (LPG Gas Product)</a>
-           <a href="https://youtu.be/_Mcvl3AbPvY"target="_blank" class="link-btn">DirectHome Rental App (Housing Rental to Checkmate Fake Agent Product)</a>
-            <a href="https://www.youtube.com/watch?v=ZOv7JT4X1yk "target="_blank" class="link-btn">Fashion Measurement App (Fashion Designers Measurement Product)</a>
-            <br><br><br>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-text">
+      <p>Welcome!</p>
+      <h1>Frederick Odume Ogwu. I prefer to be called Frederick Ogwu.</h1>
+      <p>
+        I’m a Business Systems Strategist, Product Development Lead, an Entrepreneurial and Product Coach with over 30 years of hands-on leadership experience across Europe and Africa, guiding organizations and startups from concept to real-world impact. Here are links connecting you to my professional pages where you can learn about my skills, experience, and projects.
+      </p>
+      <a href="https://linkedin.com/in/lewisham-multi-solutions-limited-4499b0278" target="_blank" class="link-btn">Company Profile</a>
+      <a href="https://medium.com/@fredogwu" target="_blank" class="link-btn">Medium</a>
+      <a href="https://linkedin.com/in/frederick-ogwu-msc-sfc-ai-wb-lean-six-sigma-acca-cat-bb002527" target="_blank" class="link-btn">LinkedIn</a>
+      
+      <!-- Dropdown Prototypes -->
+      <div class="dropdown">
+        <button class="link-btn">Project Prototypes</button>
+        <div class="dropdown-content">
+          <a href="https://youtu.be/SaDncMN1v8o" target="_blank">NaijaFuelWatch App (Nigeria Oil Subsidy Product)</a>
+          <a href="https://youtu.be/CtpujVd4Gg4" target="_blank">National Assembly App (Opinion Pool Product)</a>
+          <a href="https://youtu.be/pUUmJvmqchA" target="_blank">FTA System App (Petro Stations Product)</a>
+          <a href="https://youtu.be/O-XlwYm7nrA" target="_blank">LearnSphere AI App (Humanoid Robots Lecturer Product)</a>
+          <a href="https://youtu.be/bBOPHqC30jE" target="_blank">MicroLift Credit Loan App (Informal Sector Credit Loan Product)</a>
+          <a href="https://youtu.be/GRGk9B5m4ms" target="_blank">Assets Management App (Assets Valuation Management Product)</a>
+          <a href="https://youtu.be/yXViAeJUUC4" target="_blank">LPG Gas Home Purchase and Delivery App (LPG Gas Product)</a>
+          <a href="https://youtu.be/_Mcvl3AbPvY" target="_blank">DirectHome Rental App (Housing Rental to Checkmate Fake Agent Product)</a>
+          <a href="https://www.youtube.com/watch?v=ZOv7JT4X1yk" target="_blank">Fashion Measurement App (Fashion Designers Measurement Product)</a>
         </div>
-    </section>
-
-    <div class="hero-img">
-    <img src="Teal And White Modern Website Creation Services Instagram Post 2.jpg">
+      </div>
     </div>
+  </section>
 
-   </section> 
+  <!-- Hero Image -->
+  <div class="hero-img">
+    <img src="Teal And White Modern Website Creation Services Instagram Post 2.jpg" alt="Portfolio Banner" />
+  </div>
 
-<section class=" hero-section">
-    <div="hero-text">
-<h2>About Me: From Vision to Value — Powered by Purpose, Built on Experience, Shaped by Innovation</h2>
-
-<p>
-With over <strong>30 years of industry experience</strong>, I specialize in turning business visions into scalable, high-impact products and services. My career spans <strong>Retail Banking, Health Services, Corporate Auditing, Business Development, Manufacturing,</strong> and <strong>Software Development</strong>, delivering transformative outcomes for over <strong>1,000 SMEs and enterprise clients</strong> across Europe and Africa.
-  </p>
-    <p>
-What drives my work is a simple but powerful mantra: <strong>Understand. Innovate. Deliver (UID).<br></strong> This philosophy has enabled me to lead operational transformations that reduce risk, improve service delivery, enhance product quality, and maximize profitability for businesses across diverse sectors.
-  </p>
-At the heart of my strategy is a commitment to <strong>AI-powered decision-making and automation</strong>. I help businesses leverage data and modern technologies to build smarter systems, anticipate market trends, and improve user experience at every stage of the product lifecycle—from ideation to execution.
- 
- <p>
-My professional development has been shaped by globally recognized leadership programs such as the <strong>McKinsey Forward Program</strong>, where I honed the art of values-driven leadership, empathy, and strategic adaptability. I’ve also taken part in hands-on product innovation labs with <strong>Pendo, Panda, HP, AWS,</strong> and <strong>Microsoft Azure</strong>, ensuring I stay ahead of evolving tech and user demands.
- </p>
- 
- <p>
-Throughout my journey, I’ve worn many hats—<strong>Product Manager, Product Owner, Scrum Master, Business Analyst, Systems Auditor, and Technical Writer</strong>—always connecting business goals to agile execution through clear strategy, systems thinking, and human-centered design.
- 
- </p>
- <p>
-As a <strong>founder, co-founder, and CEO</strong> of multiple startups, I also provide coaching and advisory services, empowering entrepreneurs and social impact leaders to navigate complexity, build resilient operations, and scale smart.
- </p>
-  <p>
-My focus today is on empowering <strong>SMEs, startups, and mission-driven organizations</strong> through digital transformation, automation, and product-led growth. Whether it's optimizing internal processes, building scalable platforms, or leading innovation initiatives, I offer results-oriented collaboration grounded in <strong>integrity, clarity, and purpose</strong>.
- <br>
-If you’re looking to build something meaningful, improve your process architecture, or scale your product offerings, I invite you to <strong>connect and explore what we can achieve together</strong>.
- </p> 
-<p>
-📩 Let’s connect. Visit my LinkedIn profile or reach out directly fred@lewishamultisolutions.com to discuss how we can turn your ideas into success stories.
-  </p>
-    
-  
- <div class="hero-img">
-    <img src="me.jpg">
+  <!-- About Me Section -->
+  <section class="hero-section">
+    <div class="hero-text">
+      <h2>About Me: From Vision to Value — Powered by Purpose, Built on Experience, Shaped by Innovation</h2>
+      <p>
+        With over <strong>30 years of industry experience</strong>, I specialize in turning business visions into scalable, high-impact products and services. My career spans <strong>Retail Banking, Health Services, Corporate Auditing, Business Development, Manufacturing</strong>, and <strong>Software Development</strong>, delivering transformative outcomes for over <strong>1,000 SMEs and enterprise clients</strong> across Europe and Africa.
+      </p>
+      <p>
+        What drives my work is a simple but powerful mantra: <strong>Understand. Innovate. Deliver (UID)</strong>.
+      </p>
+      <p>
+        At the heart of my strategy is a commitment to <strong>AI-powered decision-making and automation</strong>. I help businesses leverage data and modern technologies to build smarter systems, anticipate market trends, and improve user experience at every stage of the product lifecycle.
+      </p>
+      <p>
+        My professional development has been shaped by globally recognized programs like the <strong>McKinsey Forward Program</strong>. I've also participated in product labs with <strong>Pendo, Panda, HP, AWS,</strong> and <strong>Microsoft Azure</strong>.
+      </p>
+      <p>
+        I’ve worn many hats—<strong>Product Manager, Product Owner, Scrum Master, Business Analyst, Systems Auditor, Technical Writer</strong>—always connecting business goals to agile execution through clear strategy and systems thinking.
+      </p>
+      <p>
+        As a <strong>founder, co-founder, and CEO</strong>, I also coach entrepreneurs and social impact leaders on how to scale.
+      </p>
+      <p>
+        My focus today is on empowering <strong>SMEs, startups, and mission-driven organizations</strong> through digital transformation. Whether it's optimizing operations or launching platforms, I deliver with <strong>integrity, clarity, and purpose</strong>.
+      </p>
+      <p>
+        📩 Let’s connect. Visit my LinkedIn or email me at <strong>fred@lewishamultisolutions.com</strong> to collaborate.
+      </p>
+      <img src="me.jpg" alt="Frederick Ogwu Photo" class="hero-img" />
     </div>
+  </section>
 
-</div>
-</section>
-
-   
-<section class="footsection">
-      
-<div>
-    <img src="Just Projects.jpg">
+  <!-- Footer -->
+  <section class="footsection">
+    <div>
+      <img src="Just Projects.jpg" alt="Projects Footer Image" />
     </div>
-
     <div class="footerlinkimg">
-    
-        <a href="">@2025 Frederick Ogwu</a>
-      
-     </div>
-   
-</section>
+      <a href="#">@2025 Frederick Ogwu</a>
+    </div>
+  </section>
 
-</body>  
+</body>
 </html>
