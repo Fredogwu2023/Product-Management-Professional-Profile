@@ -9,7 +9,7 @@
       text-align: center;
       margin-top: 50px;
     }
-    .resume-btn, .project-btn, .link-btn {
+    .resume-btn, .project-btn, .link-btn, .product-btn {
       padding: 10px 20px;
       font-size: 16px;
       background-color: #007bff;
@@ -24,6 +24,7 @@
     .hero-text {
       text-align: center;
       margin-top: 20px;
+      padding: 0 20px;
     }
     .dropdown {
       position: relative;
@@ -49,10 +50,26 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
+    .hero-img {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .hero-img img {
+      max-width: 100%;
+      height: auto;
+    }
+    .footsection {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .footerlinkimg {
+      margin-top: 10px;
+    }
   </style>
 </head>
 
 <body>
+
   <!-- Resume Selector -->
   <div class="container">
     <h2>Select a Resume</h2>
@@ -70,8 +87,8 @@
     <h3>Select a Project to View</h3>
     <select id="projectSelect">
       <option value="https://chatgpt.com/canvas/shared/67f927efbf5c8191a3e641c42f0d51a7">1. Annieze Farms – AI Farming to Boost Agribusiness & Create Jobs</option>
-      <option value="https://chatgpt.com/canvas/shared/67f9254845448191b46209a54fb3f7c7">2. Garment Reused Project – Fabric Recycling for Eco-Sustainability & Job Creation</option>
-    <option valve="HHI%20Call%20to%20action.pdf">3 Helpful Hand Initiative - Voluntary crowd-funding driven to eradicate unemplyement, and reduce crime across Africa </option>
+      <option value="https://chatgpt.com/canvas/shared/67f9254845448191b46209a54fb3f7c7">2. Garment Reuse Project – Fabric Recycling for Eco-Sustainability & Job Creation</option>
+      <option value="HHI%20Call%20to%20action.pdf">3. Helpful Hand Initiative – Voluntary crowdfunding to eradicate unemployment and reduce crime across Africa</option>
     </select>
     <br><br>
     <button class="project-btn" onclick="openProject()">View Project</button>
@@ -83,9 +100,15 @@
       const selectedFile = document.getElementById("resumeSelect").value;
       window.open(selectedFile, "_blank");
     }
+
     function openProject() {
       const selectedProject = document.getElementById("projectSelect").value;
       window.open(selectedProject, "_blank");
+    }
+
+    function openPrototype() {
+      const selectedPrototype = document.getElementById("prototypeSelect").value;
+      window.open(selectedPrototype, "_blank");
     }
   </script>
 
@@ -93,30 +116,31 @@
   <section class="hero-section">
     <div class="hero-text">
       <p>Welcome!</p>
-      <h1>Frederick Odume Ogwu. I prefer to be called Frederick Ogwu.</h1>
+      <h1>Frederick Odume Ogwu — I prefer to be called Frederick Ogwu.</h1>
       <p>
-        I’m a Business Systems Strategist, Product Development Lead, an Entrepreneurial and Product Coach with over 30 years of hands-on leadership experience across Europe and Africa, guiding organizations and startups from concept to real-world impact. Here are links connecting you to my professional pages where you can learn about my skills, experience, and projects.
+        I’m a Business Systems Strategist, Product Development Lead, Entrepreneurial and Product Coach with over 30 years of hands-on leadership experience across Europe and Africa. I guide organizations and startups from concept to real-world impact.
+      </p>
+      <p>
+        Here are links connecting you to my professional pages where you can learn about my skills, experience, and projects:
       </p>
       <a href="https://linkedin.com/in/lewisham-multi-solutions-limited-4499b0278" target="_blank" class="link-btn">Company Profile</a>
       <a href="https://medium.com/@fredogwu" target="_blank" class="link-btn">Medium</a>
       <a href="https://linkedin.com/in/frederick-ogwu-msc-sfc-ai-wb-lean-six-sigma-acca-cat-bb002527" target="_blank" class="link-btn">LinkedIn</a>
-      
-<h4>Select a Prototype Product to View</h4>
-<select id="prototypeSelect">
-  <option value="https://youtu.be/GRGk9B5m4ms">1. Assets Management App</option>
-  <option value="https://youtu.be/_Mcvl3AbPvY">2. DirectHome Rental App</option>
-  <option value="https://youtu.be/pUUmJvmqchA">3. FTA System App</option>
-  <option value="https://www.youtube.com/watch?v=ZOv7JT4X1yk">4. Fashion Measurement App</option>
-  <option value="https://youtu.be/O-XlwYm7nrA">5. LearnSphere AI App</option>
-  <option value="https://youtu.be/yXViAeJUUC4">6. LPG Gas Home Delivery App</option>
-  <option value="https://youtu.be/bBOPHqC30jE">7. MicroLift Credit Loan App</option>
-  <option value="https://youtu.be/SaDncMN1v8o">8. NaijaFuelWatch App</option>
-  <option value="https://youtu.be/CtpujVd4Gg4">9. National Assembly App</option>
-</select>
-<br><br>
-<button class="product-btn" onclick="openPrototype()">View Prototype</button>
 
-    </div>
+      <h4>Select a Prototype Product to View</h4>
+      <select id="prototypeSelect">
+        <option value="https://youtu.be/GRGk9B5m4ms">1. Assets Management App</option>
+        <option value="https://youtu.be/_Mcvl3AbPvY">2. DirectHome Rental App</option>
+        <option value="https://youtu.be/pUUmJvmqchA">3. FTA System App</option>
+        <option value="https://www.youtube.com/watch?v=ZOv7JT4X1yk">4. Fashion Measurement App</option>
+        <option value="https://youtu.be/O-XlwYm7nrA">5. LearnSphere AI App</option>
+        <option value="https://youtu.be/yXViAeJUUC4">6. LPG Gas Home Delivery App</option>
+        <option value="https://youtu.be/bBOPHqC30jE">7. MicroLift Credit Loan App</option>
+        <option value="https://youtu.be/SaDncMN1v8o">8. NaijaFuelWatch App</option>
+        <option value="https://youtu.be/CtpujVd4Gg4">9. National Assembly App</option>
+      </select>
+      <br><br>
+      <button class="product-btn" onclick="openPrototype()">View Prototype</button>
     </div>
   </section>
 
@@ -163,7 +187,7 @@
       <img src="Just Projects.jpg" alt="Projects Footer Image" />
     </div>
     <div class="footerlinkimg">
-      <a href="#">@2025 Frederick Ogwu</a>
+      <a href="#">© 2025 Frederick Ogwu</a>
     </div>
   </section>
 
