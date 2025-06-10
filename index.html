@@ -1,152 +1,150 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Selector</title>
-    <title>Project Selector</title>
-    <title>Prototype Product Selector</title>
-    <style>
-        .container {
-            text-align: center;
-            margin-top: 50px;
-        }
-        .resume-btn {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .resume-btn a {
-            text-decoration: none;
-            color: white;
-            display: block;
-            width: 100%;
-            height: 100%;
-            padding: 10px 20px;
-        }
-    </style>
-</head>
-<body>
+Here's the updated HTML code with the requested changes:
 
-    <div class="container">
-        <h2>Select a Resume</h2>
-        <select id="resumeSelect">
-            <option value="Fred%20Product%20Owner.pdf">Fred Product Owner</option>
-            <option value="Fred%20Product%20Manager.pdf">Fred Product Manager</option>
-            <option value="Frederick%20Ogwu%20Business%20Development.pdf">Frederick Ogwu Business Development</option>
-        </select>
-        <br>
-        <button class="resume-btn" onclick="openResume()">View Resume</button>
-    </div>
 
-    <script>
-        function openResume() {
-            var selectedFile = document.getElementById("resumeSelect").value;
-            window.open(selectedFile, "_blank");
-        }
-    </script>
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Resume Selector</title> 
+  <style> 
+    .container { 
+      text-align: center; 
+      margin-top: 50px; 
+    } 
+    .resume-btn { 
+      padding: 10px 20px; 
+      font-size: 16px; 
+      background-color: #007bff; 
+      color: white; 
+      border: none; 
+      cursor: pointer; 
+      margin-top: 10px; 
+    } 
+    .resume-btn a { 
+      text-decoration: none; 
+      color: white; 
+      display: block; 
+      width: 100%; 
+      height: 100%; 
+      padding: 10px 20px; 
+    } 
+    .project-btn { 
+      padding: 10px 20px; 
+      font-size: 16px; 
+      background-color: #007bff; 
+      color: white; 
+      border: none; 
+      cursor: pointer; 
+      margin-top: 10px; 
+    } 
+    .product-btn { 
+      padding: 10px 20px; 
+      font-size: 16px; 
+      background-color: #007bff; 
+      color: white; 
+      border: none; 
+      cursor: pointer; 
+      margin-top: 10px; 
+    } 
+  </style> 
+</head> 
+<body> 
+  <div class="container"> 
+    <h2>Select a Resume</h2> 
+    <select id="resumeSelect"> 
+      <option value="Fred%20Product%20Owner.pdf">Fred Product Owner</option> 
+      <option value="Fred%20Product%20Manager.pdf">Fred Product Manager</option> 
+      <option value="Frederick%20Ogwu%20Business%20Development.pdf">Frederick Ogwu Business Development</option> 
+    </select> 
+    <br> 
+    <button class="resume-btn" onclick="openResume()">View Resume</button> 
+  </div> 
+  <script> 
+    function openResume() { 
+      var selectedFile = document.getElementById("resumeSelect").value; 
+      window.open(selectedFile, "_blank"); 
+    } 
+  </script> 
+  <!-- Hero Section --> 
+  <section class="hero-section"> 
+    <div class="hero-text"> 
+      <p>Welcome!</p> 
+      <h1>Frederick Odume Ogwu. I prefer to be called Frederick Ogwu.</h1> 
+      <p> I am a Business System Specialist with a passion for building innovative and user-friendly software applications. Here are links connecting you to my information page where you can learn about my skills, experience, Products and projects. </p> 
+      <!-- Project Selector --> 
+      <div class="container"> 
+        <h3>Select a Project to View</h3> 
+        <select id="projectSelect"> 
+          <option value="https://chatgpt.com/canvas/shared/67f927efbf5c8191a3e641c42f0d51a7">1. Annieze Farms – AI Intigrated Farming</option> 
+          <option value="https://chatgpt.com/canvas/shared/67f9254845448191b46209a54fb3f7c7">2. Garment Reused – Fabric Recycling</option> 
+          <option value="https://Investor%20Proposal.pdf">3. Artificial Hair Extension - Recycle and Eco </option> 
+          <option value="https://chatgpt.com/c/6841840b-e428-8012-851c-50f0c019a39f">4. Helpful Hand Initiative – Crowdfunding Jobs Initiative</option> 
+        </select> 
+        <br><br> 
+        <button class="project-btn" onclick="openProject()">View Project</button> 
+      </div> 
+      <script> 
+        function openProject() { 
+          var selectedProject = document.getElementById("projectSelect").value; 
+          window.open(selectedProject, "_blank"); 
+        } 
+      </script> 
+      <a href="https://linkedin.com/in/lewisham-multi-solutions-limited-4499b0278" target="_blank" class="link-btn">Company Profile</a> 
+      <a href="https://medium.com/@fredogwu" target="_blank" class="link-btn">Medium</a> 
+      <a href="https://linkedin
+Here's the rest of the updated HTML code:
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-text">
-            <p>Welcome!</p>
-            <h1>Frederick Odume Ogwu. I prefer to be called Frederick Ogwu.</h1>
-            <p>
-                I am a Business System Specialist with a passion for building innovative 
-                and user-friendly software applications. Here are links connecting you to my
-                information page where you can learn about my skills, experience, Products and projects. 
-            </p>
-            <!-- Project Selector -->
-      <div class="container">
-        <h3>Select a Project to View</h3>
-        <select id="projectSelect">
-          <option value="https://chatgpt.com/canvas/shared/67f927efbf5c8191a3e641c42f0d51a7">1. Annieze Farms – AI Intigrated Farming</option>
-          <option value="https://chatgpt.com/canvas/shared/67f9254845448191b46209a54fb3f7c7">2. Garment Reused – Fabric Recycling</option>
-            <option value="https://Investor%20Proposal.pdf">3. Artificial Hair  Extension - Recycle and Eco </option>
-            <option value="https://chatgpt.com/c/6841840b-e428-8012-851c-50f0c019a39f">4. Helpful Hand Initiative – Crowdfunding Jobs Initiative</option>
-       
-        </select>
-        <br><br>
-          <button class="project-btn" onclick="openProduct()">View Project</button>
-      </div>
 
-      <a href="https://linkedin.com/in/lewisham-multi-solutions-limited-4499b0278" target="_blank" class="link-btn">Company Profile</a>
-      <a href="https://medium.com/@fredogwu" target="_blank" class="link-btn">Medium</a>
-      <a href="https://linkedin.com/in/frederick-ogwu-msc-sfc-ai-wb-lean-six-sigma-acca-cat-bb002527" target="_blank" class="link-btn">LinkedIn</a>
-
-      <!-- Prototype Product Dropdown -->
-      <div class="dropdown">
-        <h4>Select a Prototype Product to View</h4>
-        
-<select id="prototypeSelect">
-          <option value="https://youtu.be/GRGk9B5m4ms">1. Assets Management App</option>
-          <option value="https://youtu.be/_Mcvl3AbPvY">2. DirectHome Rental App</option>
-          <option value="https://youtu.be/4CuDTJXTn38">3. Document Management & Authorization App</option>
-          <option value="https://youtu.be/pUUmJvmqchA">4. FTA System App</option>
-          <option value="https://www.youtube.com/watch?v=ZOv7JT4X1yk">5. Fashion Measurement App</option>
-          <option value="https://youtu.be/NSElLxn1GII">6. Helpful Hand Initiative App</option>
-          <option value="https://youtu.be/O-XlwYm7nrA">7. LearnSphere AI App</option>
-          <option value="https://youtu.be/yXViAeJUUC4">8. LPG Gas Home Delivery App</option>
-          <option value="https://youtu.be/bBOPHqC30jE">9. MicroLift Credit Loan App</option>
-          <option value="https://youtu.be/SaDncMN1v8o">10. NaijaFuelWatch App</option>
-          <option value="https://youtu.be/CtpujVd4Gg4">11. National Assembly App</option>
-        </select>
-        <br><br>
-        <button class="product-btn" onclick="openPrototype()">View Prototype</button>
-      </div>
-
-        
-
-<div class="hero-img">
-            <img src="Teal And White Modern Website Creation Services Instagram Post 2.jpg" alt="Profile Image">
-        </div>
-    </section> 
-
-    <!-- About Me Section -->
-    <section class="hero-section">
-        <div class="hero-text">
-            <h2>About Me</h2>
-            <p>
-                As a seasoned Business Systems Specialist and Product Development expert with over 30 years of cross-industry leadership experience, I transform business visions into scalable products and services that drive real-world impact. With a unique blend of strategic insight, technical precision, and entrepreneurial spirit, I've worked with over 1,000 SMEs across Europe and Africa to streamline operations, reduce costs, and enhance service delivery.
-
-                <br><br>
-                My expertise spans product management, business analysis, Scrum mastery, software testing, and AI-driven insights, enabling me to deliver high-impact solutions that meet customer needs and drive profitability. Through my "Understand. Innovate. Deliver" (UID) approach, I empower businesses to transform their visions into scalable products and services that drive economic growth.
-
-                <br><br>
-                With a strong foundation in Agile methodologies, Product Design, and full-stack development, I'm well-equipped to serve businesses across industries, including fintech, finance, oil and gas, manufacturing, healthcare, and IT. My passion for leveraging AI and data insights to drive smarter decision-making has positioned me at the forefront of innovation.
-
-                <br><br>
-                I'm passionate about collaborating with businesses to develop innovative products, enhance operations, and drive profitability. If you're looking to transform your business vision into a scalable product or service that drives real-world impact, let's connect!
-
-                <br><br><br>
-                Get in Touch:
-fred@lewishamultisolutions.com
-<br><br>
-Let's turn your next idea into a success story – together!
-                <br><br>
-                
-
-            </p>
-            <div class="hero-img">
-                <img src="me.jpg" alt="Frederick Ogwu">
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <section class="footsection">
-        <div>
-            <img src="Just Projects.jpg" alt="Projects">
-        </div>
-
-        <div class="footerlinkimg">
-            <a href="#">@2025 Frederick Ogwu</a>
-        </div>
-    </section>
-
-</body>  
+<a href="https://linkedin.com/in/frederick-ogwu-msc-sfc-ai-wb-lean-six-sigma-acca-cat-bb002527" target="_blank" class="link-btn">LinkedIn</a> 
+      <!-- Prototype Product Dropdown --> 
+      <div class="dropdown"> 
+        <h4>Select a Product Prototype to View</h4> 
+        <select id="ProductprototypeSelect"> 
+          <option value="https://youtu.be/GRGk9B5m4ms">1. Assets Management App</option> 
+          <option value="https://youtu.be/_Mcvl3AbPvY">2. DirectHome Rental App</option> 
+          <option value="https://youtu.be/4CuDTJXTn38">3. Document Management & Authorization App</option> 
+          <option value="https://youtu.be/pUUmJvmqchA">4. FTA System App</option> 
+          <option value="https://www.youtube.com/watch?v=ZOv7JT4X1yk">5. Fashion Measurement App</option> 
+          <option value="https://youtu.be/NSElLxn1GII">6. Helpful Hand Initiative App</option> 
+          <option value="https://youtu.be/O-XlwYm7nrA">7. LearnSphere AI App</option> 
+          <option value="https://youtu.be/yXViAeJUUC4">8. LPG Gas Home Delivery App</option> 
+          <option value="https://youtu.be/bBOPHqC30jE">9. MicroLift Credit Loan App</option> 
+          <option value="https://youtu.be/SaDncMN1v8o">10. NaijaFuelWatch App</option> 
+          <option value="https://youtu.be/CtpujVd4Gg4">11. National Assembly App</option> 
+        </select> 
+        <br><br> 
+        <button class="product-btn" onclick="openPrototype()">View Prototype</button> 
+      </div> 
+      <script> 
+        function openPrototype() { 
+          var selectedPrototype = document.getElementById("prototypeSelect").value; 
+          window.open(selectedPrototype, "_blank"); 
+        } 
+      </script> 
+      <div class="hero-img"> 
+        <img src="Teal And White Modern Website Creation Services Instagram Post 2.jpg" alt="Profile Image"> 
+      </div> 
+    </div> 
+  </section> 
+  <!-- About Me Section --> 
+  <section class="hero-section"> 
+    <div class="hero-text"> 
+      <h2>About Me</h2> 
+      <p> As a seasoned Business Systems Specialist and Product Development expert with over 30 years of cross-industry leadership experience, I transform business visions into scalable products and services that drive real-world impact. With a unique blend of strategic insight, technical precision, and entrepreneurial spirit, I've worked with over 1,000 SMEs across Europe and Africa to streamline operations, reduce costs, and enhance service delivery. <br><br> My expertise spans product management, business analysis, Scrum mastery, software testing, and AI-driven insights, enabling me to deliver high-impact solutions that meet customer needs and drive profitability. Through my "Understand. Innovate. Deliver" (UID) approach, I empower businesses to transform their visions into scalable products and services that drive economic growth. <br><br> With a strong foundation in Agile methodologies, Product Design, and full-stack development, I'm well-equipped to serve businesses across industries, including fintech, finance, oil and gas, manufacturing, healthcare, and IT. My passion for leveraging AI and data insights to drive smarter decision-making has positioned me at the forefront of innovation. <br><br> I'm passionate about collaborating with businesses to develop innovative products, enhance operations, and drive profitability. If you're looking to transform your business vision into a scalable product or service that drives real-world impact, let's connect! <br><br><br> Get in Touch: fred@lewishamultisolutions.com <br><br> Let's turn your next idea into a success story – together! <br><br> </p> 
+      <div class="hero-img"> 
+        <img src="me.jpg" alt="Frederick Ogwu"> 
+      </div> 
+    </div> 
+  </section> 
+  <!-- Footer Section --> 
+  <section class="footsection"> 
+    <div> 
+      <img src="Just Projects.jpg" alt="Projects"> 
+    </div> 
+    <div class="footerlinkimg"> 
+      <a href="#">@2025 Frederick Ogwu</a> 
+    </div> 
+  </section> 
+</body> 
 </html>
