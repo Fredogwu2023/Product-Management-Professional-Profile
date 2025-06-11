@@ -1,6 +1,3 @@
-Here's the updated HTML code with the requested changes:
-
-
 <!DOCTYPE html> 
 <html lang="en"> 
 <head> 
@@ -12,41 +9,24 @@ Here's the updated HTML code with the requested changes:
       text-align: center; 
       margin-top: 50px; 
     } 
-    .resume-btn { 
-      padding: 10px 20px; 
-      font-size: 16px; 
-      background-color: #007bff; 
-      color: white; 
-      border: none; 
-      cursor: pointer; 
-      margin-top: 10px; 
-    } 
-    .resume-btn a { 
-      text-decoration: none; 
-      color: white; 
-      display: block; 
-      width: 100%; 
-      height: 100%; 
-      padding: 10px 20px; 
-    } 
-    .project-btn { 
-      padding: 10px 20px; 
-      font-size: 16px; 
-      background-color: #007bff; 
-      color: white; 
-      border: none; 
-      cursor: pointer; 
-      margin-top: 10px; 
-    } 
-    .product-btn { 
-      padding: 10px 20px; 
-      font-size: 16px; 
-      background-color: #007bff; 
-      color: white; 
-      border: none; 
-      cursor: pointer; 
-      margin-top: 10px; 
-    } 
+    .unified-btn {
+      padding: 10px 40px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+      width: 200px;
+    }
+    .unified-btn a {
+      text-decoration: none;
+      color: white;
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 10px 0;
+    }
   </style> 
 </head> 
 <body> 
@@ -58,7 +38,7 @@ Here's the updated HTML code with the requested changes:
       <option value="Frederick%20Ogwu%20Business%20Development.pdf">Frederick Ogwu Business Development</option> 
     </select> 
     <br> 
-    <button class="resume-btn" onclick="openResume()">View Resume</button> 
+    <button class="unified-btn" onclick="openResume()">View Resume</button> 
   </div> 
   <script> 
     function openResume() { 
@@ -82,7 +62,7 @@ Here's the updated HTML code with the requested changes:
           <option value="https://chatgpt.com/c/6841840b-e428-8012-851c-50f0c019a39f">4. Helpful Hand Initiative – Crowdfunding Jobs Initiative</option> 
         </select> 
         <br><br> 
-        <button class="project-btn" onclick="openProject()">View Project</button> 
+        <button class="unified-btn" onclick="openProject()">View Project</button> 
       </div> 
       <script> 
         function openProject() { 
@@ -91,11 +71,10 @@ Here's the updated HTML code with the requested changes:
         } 
       </script> 
      <div class="social-links">
-  <a href="https://linkedin.com/in/lewisham-multi-solutions-limited-4499b0278" target="_blank"><button class="button-btn">Company Profile</button></a>
-  <a href="https://medium.com/@fredogwu" target="_blank"><button class="button-btn">Medium</button></a>
-  <a href="https://linkedin.com/in/frederick-ogwu-msc-sfc-ai-wb-lean-six-sigma-acca-cat-bb002527" target="_blank"><button class="button-btn">LinkedIn</button></a>
-</div>
-      <b></b>
+        <a href="https://linkedin.com/in/lewisham-multi-solutions-limited-4499b0278" target="_blank"><button class="unified-btn">Company Profile</button></a>
+        <a href="https://medium.com/@fredogwu" target="_blank"><button class="unified-btn">Medium</button></a>
+        <a href="https://linkedin.com/in/frederick-ogwu-msc-sfc-ai-wb-lean-six-sigma-acca-cat-bb002527" target="_blank"><button class="unified-btn">LinkedIn</button></a>
+     </div>
       <!-- Prototype Product Dropdown --> 
       <div class="dropdown"> 
         <h4>Select a Product Prototype to View</h4> 
@@ -113,7 +92,7 @@ Here's the updated HTML code with the requested changes:
           <option value="https://youtu.be/CtpujVd4Gg4">11. National Assembly App</option> 
         </select> 
         <br><br> 
-        <button class="product-btn" onclick="openPrototype()">View Prototype</button> 
+        <button class="unified-btn" onclick="openPrototype()">View Prototype</button> 
       </div> 
       <script> 
         function openPrototype() { 
