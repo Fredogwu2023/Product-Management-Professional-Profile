@@ -5,9 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Resume Selector</title> 
   <style> 
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
     .container { 
       text-align: center; 
       margin-top: 50px; 
+      padding: 10px;
     } 
     .resume-btn, .project-btn, .product-btn, .button-btn {
       padding: 10px 20px;
@@ -28,32 +34,66 @@
       height: 100%; 
       padding: 10px 20px; 
     } 
-    .social-links {
+    .social-links, .dropdown, .hero-img, .footsection {
       text-align: center;
       margin-top: 20px;
     }
-    .dropdown {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .hero-img {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .hero-img img {
+    .hero-img img, .footsection img {
       max-width: 80%;
       height: auto;
-    }
-    .footsection {
-      text-align: center;
-      margin-top: 40px;
     }
     .footerlinkimg {
       margin-top: 10px;
     }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      .resume-btn, .project-btn, .product-btn, .button-btn {
+        width: 90%;
+        font-size: 14px;
+      }
+      select {
+        width: 90%;
+        font-size: 16px;
+      }
+      .hero-img img {
+        max-width: 100%;
+      }
+    }
+
+    /* Butterfly Animations */
+    .butterfly {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-size: cover;
+      z-index: 1;
+      animation: float 10s infinite linear;
+    }
+    .butterfly.purple {
+      background-image: url('https://cdn-icons-png.flaticon.com/512/815/815505.png');
+      top: 10%;
+      left: 5%;
+      animation-delay: 0s;
+    }
+    .butterfly.yellow {
+      background-image: url('https://cdn-icons-png.flaticon.com/512/815/815513.png');
+      top: 15%;
+      right: 5%;
+      animation-delay: 5s;
+    }
+    @keyframes float {
+      0%   { transform: translateY(0) translateX(0) rotate(0deg); }
+      25%  { transform: translateY(-20px) translateX(10px) rotate(5deg); }
+      50%  { transform: translateY(0) translateX(-10px) rotate(-5deg); }
+      75%  { transform: translateY(20px) translateX(5px) rotate(5deg); }
+      100% { transform: translateY(0) translateX(0) rotate(0deg); }
+    }
   </style> 
 </head> 
 <body> 
+  <div class="butterfly purple"></div>
+  <div class="butterfly yellow"></div>
   <div class="container"> 
     <h2>Select a Resume</h2> 
     <select id="resumeSelect"> 
@@ -76,8 +116,8 @@
     <div class="hero-text"> 
       <p>Welcome!</p> 
       <h1>Frederick Odume Ogwu. I prefer to be called Frederick Ogwu.</h1> 
-      <p> I am a Business System Specialist with a passion for building innovative and user-friendly software applications. <b></b>Here are links connecting you to my information page where you can learn about my skills, experience, Products and projects. </p> 
-      
+      <p> I am a Business System Specialist with a passion for building innovative and user-friendly software applications. <b></b> Here are links connecting you to my information page where you can learn about my skills, experience, Products and projects. </p> 
+
       <!-- Project Selector --> 
       <div class="container"> 
         <h3>Select a Project to View</h3> 
