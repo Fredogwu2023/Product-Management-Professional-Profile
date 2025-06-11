@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume Selector</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-    }
-    .container, .dropdown, .social-links {
-      text-align: center;
-      margin: 20px auto;
-    }
-    button, select {
-      width: 80%;
-      max-width: 300px;
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Resume Selector</title> 
+  <style> 
+    .container { 
+      text-align: center; 
+      margin-top: 50px; 
+    } 
+    .resume-btn, .project-btn, .product-btn, .button-btn {
       padding: 10px 20px;
       font-size: 16px;
       background-color: #007bff;
@@ -25,106 +17,129 @@
       border: none;
       cursor: pointer;
       margin-top: 10px;
-      border-radius: 5px;
+      width: 200px;
+      display: inline-block;
+    } 
+    .resume-btn a { 
+      text-decoration: none; 
+      color: white; 
+      display: block; 
+      width: 100%; 
+      height: 100%; 
+      padding: 10px 20px; 
+    } 
+    .social-links {
+      text-align: center;
+      margin-top: 20px;
     }
-    .social-links button {
-      margin: 5px;
+    .dropdown {
+      text-align: center;
+      margin-top: 20px;
     }
-    img {
-      max-width: 100%;
+    .hero-img {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .hero-img img {
+      max-width: 80%;
       height: auto;
-      display: block;
-      margin: 0 auto;
     }
-    .hero-section {
-      padding: 20px;
-    }
-    .hero-text {
+    .footsection {
       text-align: center;
-      margin-bottom: 30px;
+      margin-top: 40px;
     }
-    .hero-text p:first-child,
-    .hero-text h1 {
-      text-align: center;
+    .footerlinkimg {
+      margin-top: 10px;
     }
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-      100% { transform: translateY(0px); }
-    }
-    .butterfly {
-      position: absolute;
-      font-size: 24px;
-      animation: float 6s infinite ease-in-out;
-    }
-    .butterfly.yellow {
-      top: 100px;
-      left: 30%;
-      color: gold;
-    }
-    .butterfly.purple {
-      top: 180px;
-      right: 30%;
-      color: purple;
-    }
-    @media (max-width: 768px) {
-      button, select {
-        width: 90%;
-      }
-      .butterfly {
-        display: none;
-      }
-    }
-    .summary {
-      background-color: #ffffff;
-      padding: 10px;
-      margin: 10px auto;
-      max-width: 600px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      transition: background-color 0.3s ease;
-      cursor: pointer;
-    }
-    .summary:hover {
-      background-color: #e9f5ff;
-    }
-    .about-me {
-      text-align: justify;
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 15px;
-      background: #fff;
-      border-radius: 10px;
-      border: 1px solid #ddd;
-    }
-  </style>
-</head>
-<body>
-  <audio autoplay loop>
-    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_3620bff40c.mp3?filename=whistling-13630.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-  <div class="container">
-    <h2>Select a Resume</h2>
-    <select id="resumeSelect">
-      <option value="Fred%20Product%20Owner.pdf">Fred Product Owner</option>
-      <option value="Fred%20Product%20Manager.pdf">Fred Product Manager</option>
-      <option value="Frederick%20Ogwu%20Business%20Development.pdf">Frederick Ogwu Business Development</option>
-    </select>
-    <br>
-    <button onclick="openResume()">View Resume</button>
-    <div class="summary" onclick="openLink('Fred%20Product%20Owner.pdf')">Fred: Experienced Product Owner with Agile and strategic delivery background.</div>
-    <div class="summary" onclick="openLink('Fred%20Product%20Manager.pdf')">Fred: Product Manager with robust SaaS and cross-functional team leadership.</div>
-    <div class="summary" onclick="openLink('Frederick%20Ogwu%20Business%20Development.pdf')">Frederick Ogwu: Business development lead for B2B/B2G solutions.</div>
-  </div>
-  <div class="hero-text">
-    <p><strong>Welcome!</strong></p> 
-    <h1>Frederick Odume Ogwu. I prefer to be called Frederick Ogwu. 🦋</h1>
-   <p> I am a Business System Specialist with a passion for building innovative and user-friendly software applications. <br><br> Here are links connecting you to my information page where you can learn about my skills, experience, Products and projects.</p>
-  </div>
-  <div class="about-me">
-    <h3>About Me:</h3>
-    <p>As a seasoned Business Systems Specialist and Product Development expert with over 30 years of cross-industry leadership experience, I transform business visions into scalable products and services that drive real-world impact.<br><br>  With a unique blend of strategic insight, technical precision, and entrepreneurial spirit, I've worked with over 1,000 SMEs across Europe and Africa to streamline operations, reduce costs, and enhance service delivery.</p>
+  </style> 
+</head> 
+<body> 
+  <div class="container"> 
+    <h2>Select a Resume</h2> 
+    <select id="resumeSelect"> 
+      <option value="Fred%20Product%20Owner.pdf">Fred Product Owner</option> 
+      <option value="Fred%20Product%20Manager.pdf">Fred Product Manager</option> 
+      <option value="Frederick%20Ogwu%20Business%20Development.pdf">Frederick Ogwu Business Development</option> 
+    </select> 
+    <br> 
+    <button class="resume-btn" onclick="openResume()">View Resume</button> 
+  </div> 
+  <script> 
+    function openResume() { 
+      var selectedFile = document.getElementById("resumeSelect").value; 
+      window.open(selectedFile, "_blank"); 
+    } 
+  </script> 
+
+  <!-- Hero Section --> 
+  <section class="hero-section"> 
+    <div class="hero-text"> 
+      <p>Welcome!</p> 
+      <h1>Frederick Odume Ogwu. I prefer to be called Frederick Ogwu.</h1> 
+      <p> I am a Business System Specialist with a passion for building innovative and user-friendly software applications. <b></b>Here are links connecting you to my information page where you can learn about my skills, experience, Products and projects. </p> 
+      
+      <!-- Project Selector --> 
+      <div class="container"> 
+        <h3>Select a Project to View</h3> 
+        <select id="projectSelect"> 
+          <option value="https://chatgpt.com/canvas/shared/67f927efbf5c8191a3e641c42f0d51a7">1. Annieze Farms – AI Intigrated Farming</option> 
+          <option value="https://chatgpt.com/canvas/shared/67f9254845448191b46209a54fb3f7c7">2. Garment Reused – Fabric Recycling</option> 
+          <option value="Investor%20Proposal.pdf">3. Artificial Hair Extension - Recycle and Eco </option> 
+          <option value="https://chatgpt.com/c/6841840b-e428-8012-851c-50f0c019a39f">4. Helpful Hand Initiative – Crowdfunding Jobs Initiative</option> 
+        </select> 
+        <br><br> 
+        <button class="project-btn" onclick="openProject()">View Project</button> 
+      </div> 
+      <script> 
+        function openProject() { 
+          var selectedProject = document.getElementById("projectSelect").value; 
+          window.open(selectedProject, "_blank"); 
+        } 
+      </script> 
+
+      <div class="social-links">
+        <a href="https://linkedin.com/in/lewisham-multi-solutions-limited-4499b0278" target="_blank"><button class="button-btn">Company Profile</button></a>
+        <a href="https://medium.com/@fredogwu" target="_blank"><button class="button-btn">Medium</button></a>
+        <a href="https://linkedin.com/in/frederick-ogwu-msc-sfc-ai-wb-lean-six-sigma-acca-cat-bb002527" target="_blank"><button class="button-btn">LinkedIn</button></a>
+      </div>
+
+      <!-- Prototype Product Dropdown --> 
+      <div class="dropdown"> 
+        <h4>Select a Product Prototype to View</h4> 
+        <select id="prototypeSelect"> 
+          <option value="https://youtu.be/GRGk9B5m4ms">1. Assets Management App</option> 
+          <option value="https://youtu.be/_Mcvl3AbPvY">2. DirectHome Rental App</option> 
+          <option value="https://youtu.be/4CuDTJXTn38">3. Document Management & Authorization App</option> 
+          <option value="https://youtu.be/pUUmJvmqchA">4. FTA System App</option> 
+          <option value="https://www.youtube.com/watch?v=ZOv7JT4X1yk">5. Fashion Measurement App</option> 
+          <option value="https://youtu.be/NSElLxn1GII">6. Helpful Hand Initiative App</option> 
+          <option value="https://youtu.be/O-XlwYm7nrA">7. LearnSphere AI App</option> 
+          <option value="https://youtu.be/yXViAeJUUC4">8. LPG Gas Home Delivery App</option> 
+          <option value="https://youtu.be/bBOPHqC30jE">9. MicroLift Credit Loan App</option> 
+          <option value="https://youtu.be/SaDncMN1v8o">10. NaijaFuelWatch App</option> 
+          <option value="https://youtu.be/CtpujVd4Gg4">11. National Assembly App</option> 
+        </select> 
+        <br><br> 
+        <button class="product-btn" onclick="openPrototype()">View Prototype</button> 
+      </div> 
+      <script> 
+        function openPrototype() { 
+          var selectedPrototype = document.getElementById("prototypeSelect").value; 
+          window.open(selectedPrototype, "_blank"); 
+        } 
+      </script> 
+
+      <div class="hero-img"> 
+        <img src="Teal And White Modern Website Creation Services Instagram Post 2.jpg" alt="Profile Image"> 
+      </div> 
+    </div> 
+  </section> 
+
+  <!-- About Me Section --> 
+  <section class="hero-section"> 
+    <div class="hero-text"> 
+      <h2>About Me</h2> 
+      <p>As a seasoned Business Systems Specialist and Product Development expert with over 30 years of cross-industry leadership experience, I transform business visions into scalable products and services that drive real-world impact.<br><br>  With a unique blend of strategic insight, technical precision, and entrepreneurial spirit, I've worked with over 1,000 SMEs across Europe and Africa to streamline operations, reduce costs, and enhance service delivery.</p>
 
     <p>My expertise spans product management, business analysis, Scrum mastery, software testing, and AI-driven insights, enabling me to deliver high-impact solutions that meet customer needs and drive profitability.<br><br> Through my "Understand. Innovate. Deliver" (UID) approach, I empower businesses to transform their visions into scalable products and services that drive economic growth.</p>
 
@@ -135,17 +150,20 @@
     <p><strong>Get in Touch:</strong><br>
     fred@lewishamultisolutions.com<br>
     Let's turn your next idea into a success story – together!</p>
-  </div>
-  <div class="butterfly yellow">🦋</div>
-  <div class="butterfly purple">🦋</div>
-  <script>
-    function openResume() {
-      var selectedFile = document.getElementById("resumeSelect").value;
-      window.open(selectedFile, "_blank");
-    }
-    function openLink(url) {
-      window.open(url, "_blank");
-    }
-  </script>
-</body>
+      <div class="hero-img"> 
+        <img src="me.jpg" alt="Frederick Ogwu"> 
+      </div> 
+    </div> 
+  </section> 
+
+  <!-- Footer Section --> 
+  <section class="footsection"> 
+    <div> 
+      <img src="Just Projects.jpg" alt="Projects"> 
+    </div> 
+    <div class="footerlinkimg"> 
+      <a href="#">@2025 Frederick Ogwu</a> 
+    </div> 
+  </section> 
+</body> 
 </html>
