@@ -1,185 +1,375 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-  <meta charset="UTF-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Resume Selector</title> 
-  <style> 
-    .container { 
-      text-align: center; 
-      margin-top: 50px; 
-    } 
-    .resume-btn, .project-btn, .product-btn, .button-btn {
-      padding: 10px 20px;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Frederick Ogwu Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    .container {
+      text-align: center;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h1, h2, h3, h4 {
+      margin-bottom: 15px;
+      color: #0b3d91;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    select {
+      width: 90%;
+      max-width: 700px;
+      padding: 12px;
+      font-size: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .resume-btn,
+    .project-btn,
+    .product-btn,
+    .button-btn {
+      padding: 12px 24px;
       font-size: 16px;
       background-color: #007bff;
       color: white;
       border: none;
+      border-radius: 6px;
       cursor: pointer;
-      margin-top: 10px;
-      width: 200px;
-      display: inline-block;
-    } 
-    .resume-btn a { 
-      text-decoration: none; 
-      color: white; 
-      display: block; 
-      width: 100%; 
-      height: 100%; 
-      padding: 10px 20px; 
-    } 
+      margin: 10px;
+      transition: 0.3s ease;
+    }
+
+    .resume-btn:hover,
+    .project-btn:hover,
+    .product-btn:hover,
+    .button-btn:hover {
+      background-color: #0056b3;
+    }
+
     .social-links {
       text-align: center;
-      margin-top: 20px;
+      margin-top: 30px;
     }
-    .dropdown {
+
+    .hero-section {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .hero-text {
       text-align: center;
-      margin-top: 20px;
     }
+
     .hero-img {
       text-align: center;
-      margin-top: 20px;
+      margin-top: 30px;
     }
+
     .hero-img img {
-      max-width: 80%;
-      height: auto;
+      max-width: 300px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
     }
-    .footsection {
+
+    .dropdown {
       text-align: center;
       margin-top: 40px;
     }
-    .footerlinkimg {
-      margin-top: 10px;
+
+    .footsection {
+      text-align: center;
+      margin-top: 60px;
+      padding: 30px;
+      background-color: #0b3d91;
+      color: white;
     }
-  </style> 
-</head> 
-<body> 
-  <div class="container"> 
-    <h2>Select a Resume</h2> 
-    <select id="resumeSelect"> 
-      <option value="Fred%20Product%20Owner.pdf">Fred Product Owner</option> 
-       <option value="Fred%20Product%20Manager.pdf">Fred Product Manager</option> 
-       <option value="Frederick%20Ogwu%20Asset%20Valuaton.pdf">Fred Aesst Valution & Management</option> 
-       <option value="Fred%20Business%20Develop%20-NGO.pdf">Fred Business Development</option>
-        </select> 
-    <br> 
-    <button class="resume-btn" onclick="openResume()">View Resume</button> 
-  </div> 
-  <script> 
-    function openResume() { 
-      var selectedFile = document.getElementById("resumeSelect").value; 
-      window.open(selectedFile, "_blank"); 
-    } 
-  </script> 
 
-  <!-- Hero Section --> 
-  <section class="hero-section"> 
-    <div class="hero-text"> 
-      <p>Welcome!</p> 
-      <h1>Frederick Odume Ogwu. I prefer to be called Frederick Ogwu.</h1> 
-      <p> I am a Business System Specialist with a passion for building innovative and user-friendly software applications. <b></b>Here are links connecting you to my information page where you can learn about my skills, experience, Products and projects. </p> 
-      
-      <!-- Project Selector --> 
-      <div class="container"> 
-        <h3>Select a Project to View</h3> 
-        <select id="projectSelect"> 
-          <option value="AI%20Farming%20Article.pdf">1. Annieze Farms – AI Intigrated Farming and ecosystem sustainability Project for Jobs creation</option> 
-          <option value="https://chatgpt.com/canvas/shared/67f9254845448191b46209a54fb3f7c7">2. Garment Reused – Fabric Recycling & Ecosystem sustainbility project</option> 
-          <option value="Investor%20Proposal.pdf">3. Artificial Hair Extension - Recycle and New creation Plantain stem hair Ecosystem sustainbility project </option> 
-          <option value="HHI%20Call%20to%20action.pdf">4. Helpful Hand Initiative – CrownFunding projects that boost industrusties for Jobs creation </option> 
-        </select> 
-        <br><br>
-        <button class="project-btn" onclick="openProject()">View Project</button> 
-      </div> 
-      <script> 
-        function openProject() { 
-          var selectedProject = document.getElementById("projectSelect").value; 
-          window.open(selectedProject, "_blank"); 
-        } 
-      </script> 
+    .footsection img {
+      max-width: 250px;
+      width: 100%;
+      border-radius: 10px;
+    }
 
-      <div class="social-links">
-        <a href="https://linkedin.com/in/lewisham-multi-solutions-limited-4499b0278" target="_blank"><button class="button-btn">Company Profile</button></a>
-        <a href="https://medium.com/@fredogwu" target="_blank"><button class="button-btn">Medium</button></a>
-        <a href="https://linkedin.com/in/frederick-ogwu-msc-sfc-ai-ml-wb-lean-sigma-acca-cat-bb002527/" target="_blank"><button class="button-btn">LinkedIn</button></a>
+    .footerlinkimg {
+      margin-top: 20px;
+    }
+
+    .footerlinkimg a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footerlinkimg a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .resume-btn,
+      .project-btn,
+      .product-btn,
+      .button-btn {
+        width: 90%;
+      }
+
+      select {
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Resume Selector -->
+  <div class="container">
+    <h2>Select a Resume</h2>
+
+    <select id="resumeSelect">
+      <option value="Fred%20Product%20Owner.pdf">Fred Product Owner</option>
+      <option value="Fred%20Product%20Manager.pdf">Fred Product Manager</option>
+      <option value="Frederick%20Ogwu%20Asset%20Valuation.pdf">Fred Asset Valuation & Management</option>
+      <option value="Fred%20Business%20Develop-NGO.pdf">Fred Business Development</option>
+    </select>
+
+    <br /><br />
+
+    <button class="resume-btn" onclick="openResume()">
+      View Resume
+    </button>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-text">
+
+      <p>Welcome!</p>
+
+      <h1>
+        Frederick Odume Ogwu <br />
+        <small>I prefer to be called Frederick Ogwu.</small>
+      </h1>
+
+      <p>
+        I am a Product Leader, AI-driven SaaS Builder, and Business Transformation Specialist passionate about building innovative and scalable software applications.
+        Here are links connecting you to my professional information, products, projects, and business innovations.
+      </p>
+
+      <!-- Project Selector -->
+      <div class="container">
+        <h3>Select a Project to View</h3>
+
+        <select id="projectSelect">
+          <option value="AI%20Farming%20Article.pdf">
+            1. Annieze Farms – AI Integrated Farming & Sustainability Project
+          </option>
+
+          <option value="https://chatgpt.com/canvas/shared/67f9254845448191b46209a54fb3f7c7">
+            2. Garment Reused – Fabric Recycling & Sustainability Project
+          </option>
+
+          <option value="Investor%20Proposal.pdf">
+            3. Artificial Hair Extension – Plantain Stem Hair Recycling Project
+          </option>
+
+          <option value="HHI%20Call%20to%20action.pdf">
+            4. Helpful Hand Initiative – Crowdfunding for Industrial Growth
+          </option>
+        </select>
+
+        <br /><br />
+
+        <button class="project-btn" onclick="openProject()">
+          View Project
+        </button>
       </div>
 
-      <!-- Prototype Products Dropdown --> 
-      <div class="dropdown"> 
-        <h4>Select a Product Prototype | MPV | MMF to View</h4> 
-        <select id="prototypeSelect"> 
-          <option value="https://youtu.be/GRGk9B5m4ms">1. Assets Management App</option> 
-          <option value="https://youtu.be/_Mcvl3AbPvY">2. DirectHome Rental App</option> 
-          <option value="https://youtu.be/4CuDTJXTn38">3. Document Management & Authorization App</option> 
-          <option value="https://www.dokwa.com/">4. Dokwa AI Finance Co-pilot MVP</option>
-          <option value="https://youtu.be/pUUmJvmqchA">5. FTA System App</option> 
-          <option value="https://www.youtube.com/watch?v=ZOv7JT4X1yk">6. Fashion Measurement App</option> 
-          <option value="https://youtu.be/NSElLxn1GII">7. Helpful Hand Initiative App</option> 
-          <option value="https://youtu.be/O-XlwYm7nrA">8. LearnSphere AI App</option> 
-          <option value="https://youtu.be/yXViAeJUUC4">9. LPG Gas Home Delivery App</option> 
-          <option value="https://youtu.be/bBOPHqC30jE">10. MicroLift Credit Loan App</option> 
-          <option value="https://youtu.be/SaDncMN1v8o">11. NaijaFuelWatch App</option> 
-          <option value="https://youtu.be/CtpujVd4Gg4">12. National Assembly App</option> 
-        </select> 
-        <br><br> 
-        <button class="product-btn" onclick="openPrototype()">View Prototype</button> 
-      </div> 
-      <script> 
-        function openPrototype() { 
-          var selectedPrototype = document.getElementById("prototypeSelect").value; 
-          window.open(selectedPrototype, "_blank"); 
-        } 
-      </script> 
+      <!-- Social Links -->
+      <div class="social-links">
 
-      <div class="hero-img"> 
-        <img src="Teal And White Modern Website Creation Services Instagram Post 2.jpg" alt="Profile Image"> 
-      </div> 
-    </div> 
-  </section> 
+        <a href="https://linkedin.com/in/lewisham-multi-solutions-limited-4499b0278" target="_blank">
+          <button class="button-btn">Company Profile</button>
+        </a>
 
-  ```html
-<!-- About Me Section --> 
-<section class="hero-section"> 
-  <div class="hero-text"> 
-    <h2>About Me</h2> 
+        <a href="https://medium.com/@fredogwu" target="_blank">
+          <button class="button-btn">Medium</button>
+        </a>
 
-    <p>
-      Frederick Odume Ogwu is a Product Leader, AI-driven SaaS Builder, and Business Transformation Specialist with over 10 years of experience leading software product development across fintech, edtech, energy, manufacturing, and enterprise solutions. He has successfully managed multiple 0→1 product initiatives, driving product vision, MVP execution, go-to-market strategy, and stakeholder engagement for AI-enabled and data-driven platforms.
-    </p>
+        <a href="https://linkedin.com/in/frederick-ogwu-msc-sfc-ai-ml-wb-lean-sigma-acca-cat-bb002527/" target="_blank">
+          <button class="button-btn">LinkedIn</button>
+        </a>
 
-    <p>
-      He possesses strong expertise in Product Management, AI SaaS solutions, Agile/Scrum delivery, business analysis, API-driven systems, cloud technologies (AWS & Azure), data analytics (Python, Pandas, Power BI), and digital transformation. Frederick has led cross-functional teams in building scalable enterprise platforms, developer-focused products, and automation systems that improved operational efficiency, revenue growth, and customer adoption.
-    </p>
+      </div>
 
-    <p>
-      Currently leading the MVP development of Dokwa, an AI-powered Finance Copilot platform, Frederick combines a founder mindset with strong commercial awareness, technical leadership, and strategic execution. He is also driving the development of DiraFlow, a SIM-less business operations platform integrating Finance, Asset Management, and Operational Workflow tools, currently advancing toward Minimum Marketable Features (MMF) to support scalable business process automation and enterprise efficiency.
-    </p>
+      <!-- Prototype Products -->
+      <div class="dropdown">
 
-    <p>
-      His passion lies in building innovative AI-enabled products that solve complex business problems while creating scalable market opportunities through technology, automation, and intelligent digital transformation.
-    </p>
+        <h4>Select a Product Prototype | MVP | MMF to View</h4>
 
-   <p><strong>Get in Touch:</strong><br>
-    fred@lewishamultisolutions.com<br>
-     Let’s build scalable AI-driven products that transform businesses and create measurable impact.</p>
-      <div class="hero-img"> 
-        <img src="me.jpg" alt="Frederick Ogwu"> 
-      </div> 
-    </div> 
-  </section> 
+        <select id="prototypeSelect">
 
-  <!-- Footer Section --> 
-  <section class="footsection"> 
-    <div> 
-      <img src="Just Projects.jpg" alt="Projects"> 
-    </div> 
-    <div class="footerlinkimg"> 
-      <a href="#">@2026 Frederick Ogwu</a> 
-    </div> 
-  </section> 
-</body> 
+          <option value="https://youtu.be/GRGk9B5m4ms">
+            1. Assets Management App
+          </option>
+
+          <option value="https://youtu.be/_Mcvl3AbPvY">
+            2. DirectHome Rental App
+          </option>
+
+          <option value="https://youtu.be/4CuDTJXTn38">
+            3. Document Management & Authorization App
+          </option>
+
+          <option value="https://www.dokwa.com/">
+            4. Dokwa AI Finance Co-pilot MVP
+          </option>
+
+          <option value="https://youtu.be/pUUmJvmqchA">
+            5. FTA System App
+          </option>
+
+          <option value="https://www.youtube.com/watch?v=ZOv7JT4X1yk">
+            6. Fashion Measurement App
+          </option>
+
+          <option value="https://youtu.be/NSElLxn1GII">
+            7. Helpful Hand Initiative App
+          </option>
+
+          <option value="https://youtu.be/O-XlwYm7nrA">
+            8. LearnSphere AI App
+          </option>
+
+          <option value="https://youtu.be/yXViAeJUUC4">
+            9. LPG Gas Home Delivery App
+          </option>
+
+          <option value="https://youtu.be/bBOPHqC30jE">
+            10. MicroLift Credit Loan App
+          </option>
+
+          <option value="https://youtu.be/SaDncMN1v8o">
+            11. NaijaFuelWatch App
+          </option>
+
+          <option value="https://youtu.be/CtpujVd4Gg4">
+            12. National Assembly App
+          </option>
+
+        </select>
+
+        <br /><br />
+
+        <button class="product-btn" onclick="openPrototype()">
+          View Prototype
+        </button>
+
+      </div>
+
+      <!-- Hero Image -->
+      <div class="hero-img">
+        <img src="Teal And White Modern Website Creation Services Instagram Post 2.jpg" alt="Profile Image">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section class="hero-section">
+
+    <div class="hero-text">
+
+      <h2>About Me</h2>
+
+      <p>
+        Frederick Odume Ogwu is a Product Leader, AI-driven SaaS Builder, and Business Transformation Specialist with over 10 years of experience leading software product development across fintech, edtech, energy, manufacturing, and enterprise solutions.
+      </p>
+
+      <p>
+        He possesses strong expertise in Product Management, AI SaaS solutions, Agile/Scrum delivery, business analysis, API-driven systems, cloud technologies (AWS & Azure), data analytics (Python, Pandas, Power BI), and digital transformation.
+      </p>
+
+      <p>
+        Currently leading the MVP development of Dokwa, an AI-powered Finance Copilot platform, Frederick combines a founder mindset with strong commercial awareness, technical leadership, and strategic execution.
+      </p>
+
+      <p>
+        He is also driving the development of DiraFlow, a SIM-less business operations platform integrating Finance, Asset Management, and Operational Workflow tools, currently advancing toward Minimum Marketable Features (MMF).
+      </p>
+
+      <p>
+        His passion lies in building innovative AI-enabled products that solve complex business problems through technology, automation, and intelligent digital transformation.
+      </p>
+
+      <p>
+        <strong>Get in Touch:</strong><br>
+        fred@lewishamultisolutions.com
+      </p>
+
+      <div class="hero-img">
+        <img src="me.jpg" alt="Frederick Ogwu">
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <section class="footsection">
+
+    <div>
+      <img src="Just Projects.jpg" alt="Projects">
+    </div>
+
+    <div class="footerlinkimg">
+      <a href="#">
+        © 2026 Frederick Ogwu
+      </a>
+    </div>
+
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+
+    function openResume() {
+      const selectedFile = document.getElementById("resumeSelect").value;
+      window.open(selectedFile, "_blank");
+    }
+
+    function openProject() {
+      const selectedProject = document.getElementById("projectSelect").value;
+      window.open(selectedProject, "_blank");
+    }
+
+    function openPrototype() {
+      const selectedPrototype = document.getElementById("prototypeSelect").value;
+      window.open(selectedPrototype, "_blank");
+    }
+
+  </script>
+
+</body>
 </html>
-
-
-
-
