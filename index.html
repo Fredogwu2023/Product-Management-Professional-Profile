@@ -1,365 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Frederick Ogwu Portfolio</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f7fa;
-      color: #333;
-      line-height: 1.7;
-    }
-
-    .container {
-      text-align: center;
-      margin: 40px auto;
-      padding: 20px;
-    }
-
-    h1, h2, h3, h4 {
-      margin-bottom: 15px;
-      color: #0b3d91;
-    }
-
-    p {
-      margin-bottom: 20px;
-    }
-
-    select {
-      width: 90%;
-      max-width: 450px;
-      padding: 12px;
-      font-size: 15px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-
-    .resume-btn,
-    .project-btn,
-    .product-btn,
-    .button-btn {
-      padding: 12px 24px;
-      font-size: 16px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      margin: 10px;
-      transition: 0.3s ease;
-    }
-
-    .resume-btn:hover,
-    .project-btn:hover,
-    .product-btn:hover,
-    .button-btn:hover {
-      background-color: #0056b3;
-    }
-
-    .social-links {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .hero-section {
-      width: 90%;
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    .hero-text {
-      text-align: center;
-    }
-
-    .hero-img {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .hero-img img {
-      max-width: 300px;
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-    }
-
-    .dropdown {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .footsection {
-      text-align: center;
-      margin-top: 60px;
-      padding: 30px;
-      background-color: #0b3d91;
-      color: white;
-    }
-
-    .footsection img {
-      max-width: 250px;
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    .footerlinkimg {
-      margin-top: 20px;
-    }
-
-    .footerlinkimg a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .footerlinkimg a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .resume-btn,
-      .project-btn,
-      .product-btn,
-      .button-btn {
-        width: 90%;
-      }
-
-      select {
-        width: 95%;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Frederick Ogwu | Product Leader | AI SaaS Builder</title>
+<meta name="description" content="Official portfolio of Frederick Ogwu.">
+<meta name="author" content="Frederick Ogwu">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#f5f7fa;color:#333;line-height:1.7}
+.container,.hero-text,.dropdown,.social-links{text-align:center}
+.container{margin:40px auto;padding:20px}
+.hero-section{width:90%;max-width:1100px;margin:auto;padding:40px 20px}
+.hero-img{margin-top:30px;text-align:center}
+.hero-img img,.footsection img{max-width:300px;width:100%;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.2)}
+h1,h2,h3,h4{color:#0b3d91;margin-bottom:15px}p{margin-bottom:20px}
+select{width:90%;max-width:450px;padding:12px;border:1px solid #ccc;border-radius:6px}
+.button-btn,.resume-btn,.project-btn,.product-btn{display:inline-block;padding:12px 24px;background:#007bff;color:#fff;text-decoration:none;border:none;border-radius:6px;cursor:pointer;margin:10px;transition:.3s}
+.button-btn:hover,.resume-btn:hover,.project-btn:hover,.product-btn:hover{background:#0056b3}
+.footsection{text-align:center;margin-top:60px;padding:30px;background:#0b3d91;color:#fff}
+.footerlinkimg a{color:#fff;text-decoration:none}
+@media(max-width:768px){.button-btn,.resume-btn,.project-btn,.product-btn,select{width:95%}}
+</style>
 </head>
-
 <body>
-
-  <!-- Resume Selector -->
-  <div class="container">
-    <h2>Select a Resume</h2>
-
-    <select id="resumeSelect">
-      <option value="Fred%20Product%20Owner.pdf">Product Owner</option>
-      <option value="Fred%20Product%20Manager.pdf">Product Manager</option>
-      <option value="Frederick%20Ogwu%20Asset%20Valuaton.pdf">Asset Valuation & Management</option>
-      <option value="Fred%20Business%20Develop%2NGO.pdf">Business Development</option>
-    </select>
-
-    <br /><br />
-
-    <button class="resume-btn" onclick="openResume()">
-      View Resume
-    </button>
-  </div>
-
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-text">
-
-      <p>Welcome!</p>
-
-      <h1>
-        Frederick Odume Ogwu <br />
-        <small>I prefer to be called Frederick Ogwu.</small>
-      </h1>
-
-      <p>
-        I am a Product Leader, AI-driven SaaS Builder, and Business Transformation Specialist passionate about building innovative and scalable software applications.
-        Here are links connecting you to my professional information, products, projects, and business innovations.
-      </p>
-
-      <!-- Project Selector -->
-      <div class="container">
-        <h3>Select a Project to View</h3>
-
-        <select id="projectSelect">
-          <option value="AI%20Farming%20Article.pdf">Enterprise AI Integrated Farming & Sustainability</option>
-
-          <option value="Garment%20Recycling.pdf">Fabric Recycling & Community Industrialization Development</option>
-
-          <option value="Hair%20Extension%20Project.pdf">Artificial Hair Recycling & Sustainability Growth</option>
-
-          <option value="HHI%20Call%20to%20action.pdf">Helpful Hand, an Initiatives to Creation Jobs & Industrialization</option>
-        </select>
-
-        <br /><br />
-
-        <button class="project-btn" onclick="openProject()">View Project</button>
-      </div>
-
-      <!-- Social Links -->
-      <div class="social-links">
-
-        <a href="https://linkedin.com/in/lewisham-multi-solutions-limited-4499b0278" target="_blank">
-          <button class="button-btn">Company Profile</button>
-        </a>
-
-        <a href="https://medium.com/@fredogwu" target="_blank">
-          <button class="button-btn">Medium</button>
-        </a>
-
-        <a href="https://linkedin.com/in/frederick-ogwu-msc-sfc-ai-ml-wb-lean-sigma-acca-cat-bb002527/" target="_blank">
-          <button class="button-btn">LinkedIn</button>
-        </a>
-
-      </div>
-
-      <!-- Prototype Products -->
-      <div class="dropdown">
-
-        <h4>Select a Product Prototype | MVP | MMF to View</h4>
-
-        <select id="prototypeSelect">
-
-          <option value="https://youtu.be/GRGk9B5m4ms">
-            1. Assets Management App
-          </option>
-
-          <option value="https://youtu.be/_Mcvl3AbPvY">
-            2. DirectHome Rental App
-          </option>
-
-          <option value="https://youtu.be/4CuDTJXTn38">
-            3. Document Management & Authorization App
-          </option>
-
-          <option value="https://www.dokwa.com/">
-            4. Dokwa AI Finance Co-pilot MVP
-          </option>
-
-          <option value="https://youtu.be/pUUmJvmqchA">
-            5. FTA System App
-          </option>
-
-          <option value="https://www.youtube.com/watch?v=ZOv7JT4X1yk">
-            6. Fashion Measurement App
-          </option>
-
-          <option value="https://youtu.be/NSElLxn1GII">
-            7. Helpful Hand Initiative App
-          </option>
-
-          <option value="https://youtu.be/O-XlwYm7nrA">
-            8. LearnSphere AI App
-          </option>
-
-          <option value="https://youtu.be/yXViAeJUUC4">
-            9. LPG Gas Home Delivery App
-          </option>
-
-          <option value="https://youtu.be/bBOPHqC30jE">
-            10. MicroLift Credit Loan App
-          </option>
-
-          <option value="https://youtu.be/SaDncMN1v8o">
-            11. NaijaFuelWatch App
-          </option>
-
-          <option value="https://youtu.be/CtpujVd4Gg4">
-            12. National Assembly App
-          </option>
-
-        </select>
-
-        <br /><br />
-
-        <button class="product-btn" onclick="openPrototype()">
-          View Prototype
-        </button>
-
-      </div>
-
-      <!-- Hero Image -->
-      <div class="hero-img">
-        <img src="Teal And White Modern Website Creation Services Instagram Post 2.jpg" alt="Profile Image">
-      </div>
-
-    </div>
-  </section>
-
-  <!-- About Me -->
-  <section class="hero-section">
-
-    <div class="hero-text">
-
-      <h2>About Me</h2>
-
-      <p>
-        Frederick Odume Ogwu is a Product Leader, AI-driven SaaS Builder, and Business Transformation Specialist with over 10 years of experience leading software product development across fintech, edtech, energy, manufacturing, and enterprise solutions.
-      </p>
-
-      <p>
-        He possesses strong expertise in Product Management, AI SaaS solutions, Agile/Scrum delivery, business analysis, API-driven systems, cloud technologies (AWS & Azure), data analytics (Python, Pandas, Power BI), and digital transformation.
-      </p>
-
-      <p>
-        Currently leading the MVP development of Dokwa, an AI-powered Finance Copilot platform, Frederick combines a founder mindset with strong commercial awareness, technical leadership, and strategic execution.
-      </p>
-
-      <p>
-        He is also driving the development of DiraFlow, a SIM-less business operations platform integrating Finance, Asset Management, and Operational Workflow tools, currently advancing toward Minimum Marketable Features (MMF).
-      </p>
-
-      <p>
-        His passion lies in building innovative AI-enabled products that solve complex business problems through technology, automation, and intelligent digital transformation.
-      </p>
-
-      <p>
-        <strong>Get in Touch:</strong><br>
-        fred@lewishamultisolutions.com
-      </p>
-
-      <div class="hero-img">
-        <img src="me.jpg" alt="Frederick Ogwu">
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- Footer -->
-  <section class="footsection">
-
-    <div>
-      <img src="Just Projects.jpg" alt="Projects">
-    </div>
-
-    <div class="footerlinkimg">
-      <a href="#">
-        © 2026 Frederick Ogwu
-      </a>
-    </div>
-
-  </section>
-
-  <!-- JavaScript -->
-  <script>
-
-    function openResume() {
-      const selectedFile = document.getElementById("resumeSelect").value;
-      window.open(selectedFile, "_blank");
-    }
-
-    function openProject() {
-      const selectedProject = document.getElementById("projectSelect").value;
-      window.open(selectedProject, "_blank");
-    }
-
-    function openPrototype() {
-      const selectedPrototype = document.getElementById("prototypeSelect").value;
-      window.open(selectedPrototype, "_blank");
-    }
-
-  </script>
-
-</body>
-</html>
+<div class="container">
+<h2>Select a Resume</h2>
+<select id="resumeSelect">
+<option value="Fred%20Product%20Owner.pdf">Product Owner</option>
+<option value="Fred%20Product%20Manager.pdf">Product Manager</option>
+<option value="Frederick%20Ogwu%20Asset%20Valuaton.pdf">Asset Valuation &amp; Management</option>
+<option value="Fred%20Business%20Develop%20NGO.pdf">Business Development</option>
+</select><br><br>
+<button class="resume-btn" onclick="openFile('resumeSelect')">View Resume</button>
+</div>
+<section class="hero-section"><div class="hero-text">
+<p>Welcome!</p>
+<h1>Frederick Odume Ogwu<br><small>I prefer to be called Frederick Ogwu.</small></h1>
+<p>I am a Product Leader, AI-driven SaaS Builder, and Business Transformation Specialist.</p>
+<div class="container">
+<h3>Select a Project to View</h3>
+<select id="projectSelect">
+<option value="AI%20Farming%20Article.pdf">Enterprise AI Integrated Farming &amp; Sustainability</option>
+<option value="Garment%20Recycling.pdf">Fabric Recycling &amp; Community Industrialization Development</option>
+<option value="Hair%20Extension%20Project.pdf">Artificial Hair Recycling &amp; Sustainability Growth</option>
+<option value="HHI%20Call%20to%20action.pdf">Helpful Hand Initiative</option>
+</select><br><br>
+<button class="project-btn" onclick="openFile('projectSelect')">View Project</button>
+</div>
+<div class="social-links">
+<a class="button-btn" href="https://linkedin.com/in/lewisham-multi-solutions-limited-4499b0278" target="_blank" rel="noopener noreferrer">Company Profile</a>
+<a class="button-btn" href="https://medium.com/@fredogwu" target="_blank" rel="noopener noreferrer">Medium</a>
+<a class="button-btn" href="https://linkedin.com/in/frederick-ogwu-msc-sfc-ai-ml-wb-lean-sigma-acca-cat-bb002527/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+<div class="dropdown">
+<h4>Select a Product Prototype</h4>
+<select id="prototypeSelect">
+<option value="https://youtu.be/GRGk9B5m4ms">Assets Management App</option>
+<option value="https://youtu.be/_Mcvl3AbPvY">DirectHome Rental App</option>
+<option value="https://youtu.be/4CuDTJXTn38">Document Management App</option>
+<option value="https://www.dokwa.com/">Dokwa AI Finance Co-pilot</option>
+</select><br><br>
+<button class="product-btn" onclick="openFile('prototypeSelect')">View Prototype</button>
+</div>
+<div class="hero-img"><img loading="lazy" src="Teal And White Modern Website Creation Services Instagram Post 2.jpg" alt="Profile"></div>
+</div></section>
+<section class="hero-section"><div class="hero-text">
+<h2>About Me</h2>
+<p>Frederick Odume Ogwu is a Product Leader, AI-driven SaaS Builder and Business Transformation Specialist.</p>
+<p><strong>Get in Touch:</strong><br><a href="mailto:fred@lewishamultisolutions.com">fred@lewishamultisolutions.com</a></p>
+<div class="hero-img"><img loading="lazy" src="me.jpg" alt="Frederick Ogwu"></div>
+</div></section>
+<section class="footsection">
+<img loading="lazy" src="Just Projects.jpg" alt="Projects">
+<div class="footerlinkimg">© <span id="year"></span> Frederick Ogwu</div>
+</section>
+<script>
+function openFile(id){const v=document.getElementById(id).value;if(v)window.open(v,"_blank","noopener,noreferrer");}
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body></html>
